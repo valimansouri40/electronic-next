@@ -1,0 +1,76 @@
+.input_form_box{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: .6rem;
+}
+.input_form{
+    width: 98%;
+    background: var(--blue-light);
+    border: 2px solid rgb(38, 101, 196);
+    border-radius: 4px;
+    height: 2rem;
+    font-size: .8rem;
+    font-weight: 700;
+    outline: none;
+    padding: 0 .2rem;
+    color: var(--blue-dark);
+}
+
+.invalid_input{
+    border: 2px solid rgb(215, 54, 54);
+
+}
+
+.label_form{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 3rem;
+}
+
+.label_form span{
+    margin-top: .6rem;
+    color: var(--blue-light);
+    font-size: .9rem;
+    font-weight: 500;
+    padding: .4rem 1rem;
+    background: var(--blue-light);
+    border-radius: 6px;
+    color: var(--blue-dark);
+}
+.label_form img{
+    width: 25px;
+    height: 25px;
+    border-radius: 8px;
+    margin-top: .6rem;
+
+}
+
+.textarea_form{
+    margin-top: .6rem;
+    max-width: 100%;
+    max-height: 4rem;
+    height: 4rem;
+    color: var(--blue-dark);
+    background: var(--blue-light);
+    width: 100%;
+    border: 2px solid rgb(38, 101, 196);
+
+}
+
+.select_form{
+    width: 98%;
+    background: var(--blue-light);
+    border: 2px solid rgb(38, 101, 196);
+    border-radius: 4px;
+    height: 2rem;
+    font-size: .8rem;
+    font-weight: 700;
+    outline: none;
+    padding: 0 .2rem;
+    color: var(--blue-dark);
+
+}

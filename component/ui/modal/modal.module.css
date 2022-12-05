@@ -1,0 +1,147 @@
+.modal_background{
+    width: 100%;
+    z-index: 40000;
+
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background: #01325392;
+    animation: showModal 2s forwards;
+}
+.modal_target{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal_box{
+    width: 20rem;
+    height: 20rem;
+    z-index: 50000;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background: var(--blue-light);
+    border-radius: 12px;
+    box-shadow: 0 8px 14px var(--blue-dark) ;
+    animation: openModal 2s forwards;
+    position: relative;
+}
+.modal_box .close_box{
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    z-index: 4000;
+}
+ .span_2{
+    content: "";
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2px;
+    height: 1.2rem;
+    background: var(--blue-dark);
+    transform: rotate(40deg);
+}
+
+
+.modal_box .span_1{
+    content: "";
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2px;
+    height: 1.2rem;
+    background: var(--blue-dark);
+    transform: rotate(-40deg);
+}
+
+.modal_title_box{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal_title_box h3{
+    font-size: 1rem ;
+    font-weight: 500;
+    color: var(--blue-dark);
+}
+
+.modal_btn_box{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.modal_btn_ok{
+    padding: .4rem 1rem;
+    background: rgb(37, 197, 69);
+    outline: none;
+    border: 1px solid var(--blue-light) ;
+    border-top: 1PX solid rgb(37, 197, 69);
+    border-left: 1PX solid rgb(37, 197, 69);
+    box-shadow: 0 3px 3px var(--blue-dark);
+    font-size: 1rem;
+    color: var(--blue-dark);
+    border-radius: 6px;
+    transition: all 1s ease;
+}
+
+.modal_btn_ok:hover{
+    background: rgb(28, 157, 54);
+    color: #fff;
+}
+
+.modal_btn_cancel{
+    padding: .4rem 1rem;
+    background: rgb(215, 54, 54);
+    outline: none;
+    border: 1px solid var(--blue-light) ;
+    border-top: 1PX solid rgb(215, 54, 54);
+    border-left: 1PX solid rgb(215, 54, 54);
+    box-shadow: 0 3px 3px var(--blue-dark);
+    font-size: 1rem;
+    color: var(--blue-dark);
+    border-radius: 6px;
+    transition: all 1s ease;
+}
+
+.modal_btn_cancel:hover{
+    background: rgb(174, 31, 31);
+    color: #fff;
+}
+
+.modal_open{
+    animation: openModal 2s forwards;
+}
+
+@keyframes openModal{
+    from{
+        transform: translateY(-150%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+
+.modal_close{
+    animation: closeModal 1s forwards;
+}
+
+@keyframes showModal{
+    from{
+        background: #01325300;
+    }
+    to{
+        background: #01325392;   
+       
+    }
+}

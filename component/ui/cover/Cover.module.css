@@ -1,0 +1,26 @@
+.cover_target{
+    width: 100%;
+    height: calc(100vh - 4rem);
+    background-image: url("../../../assets/Blue-circuit-EE-MEng-ind.jpg");
+    background-position: center;
+    background-repeat: repeat-x;
+    margin: 0;
+    padding: 0;
+}
+
+.hidden{
+    display: none;
+}
+
+@media (max-width: 1800px){
+ .cover_target{
+    background-position:top;
+    /* width: 190%;     */
+ }   
+}
+
+@media (max-width: 700px){
+    .cover_target{
+        height: 70vh;
+    }
+}

@@ -1,0 +1,25 @@
+.select_box{
+    width: 14rem;
+    display: block;
+    margin: 0 1rem;
+}
+
+.selecttag{
+    width: 100%;
+    padding: .2rem ;
+    height: 2.2rem;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    color: #111;
+    border-radius: 3px 3px 8px 3px;
+    background: var(--blue-light);
+    border: 1px solid #111;
+    box-shadow: 0 .2rem .3rem rgb(144, 145, 147);
+}
+
+@media (max-width:700px){
+ .responsive{
+     width: 20rem;
+ }    
+}

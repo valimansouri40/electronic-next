@@ -1,0 +1,23 @@
+.searchbar_target{
+    width: 100%;
+}
+.searchbar_box{
+    margin: 0 auto;
+    padding-top: 3rem;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 6rem;
+}
+
+@media (max-width: 700px){
+    .searchbar_box{
+        flex-direction: column;
+        height: 12rem;
+        justify-content:space-between;
+    }
+
+}
+
+

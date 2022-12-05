@@ -1,0 +1,89 @@
+.cart_frame{
+    width: 100%;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart_target{
+    width: 270px;
+    height: 340px;
+    border: 1px solid rgb(132, 126, 126);
+    box-shadow: 0 .4rem .4rem rgb(132, 126, 126);
+    border-radius: 5px 5px 5px 40px;
+    overflow: hidden;
+}
+
+.cart_imgbox{
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    background: var(--blue-dark);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 92%);
+}
+.cart_imgbox img{
+    width: 100%;
+    height: 92%;
+    border-radius: 0 0 25px 0;
+    transition: all 1s ease;
+}
+.cart_imgbox img:hover{
+    transform: scale(1.1);
+    transform-origin: right;
+    border-radius: 0 0 40px 0;
+
+}
+
+.cart_textbox{
+    width: 90%;
+    margin: 0 auto;
+    height: 125px;
+    overflow: hidden;
+}
+.cart_textbox h2{
+    color: var(--blue-dark);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+.cart_textbox p{
+    color: var(--blue-dark);
+    font-size: 1rem;
+}
+
+.ui_hr{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.cart_pricebox{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+.cart_pricebox span{
+    color: var(--blue-dark);
+    margin-left: 1rem;
+    font-weight: 600;
+}
+
+.sell_video_btn{
+    padding: .4rem 1rem;
+    background: var(--blue-light);
+    outline: none;
+    border: 1px solid var(--blue-light) ;
+    border-top: 1PX solid rgb(37, 136, 197);
+    border-left: 1PX solid rgb(37, 136, 197);
+    box-shadow: 0 3px 3px var(--blue-dark);
+    font-size: 1rem;
+    color: var(--blue-dark);
+    border-radius: 6px;
+    transition: all 1s ease;
+}
+
+.sell_video_btn:hover{
+    background: rgb(38, 101, 196);
+    color: #fff;
+}

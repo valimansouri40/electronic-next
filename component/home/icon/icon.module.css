@@ -1,0 +1,21 @@
+.icon_target{
+    direction: ltr;
+    width: 10rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon_box{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: var(--blue-light);
+    margin-left: -2rem;
+    box-shadow: 0 .2rem .2rem #111;
+}
+.icon_img{
+    object-fit: cover;
+
+}

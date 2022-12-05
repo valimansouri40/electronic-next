@@ -1,0 +1,17 @@
+
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@/redux@toolkit/*": ["redux@toolkit/*"],
+        "@/styles/*": ["styles/*"],
+        // "@/helpers/*": ["helpers/*"],
+        "@/assets/*": ["assets/*"],
+        "@/config/*": ["config/*"],
+        // "@/features/*": ["features/*"],
+        "@/fetchData/*": ["fetchData/*"],
+        // "@/data/*": ["data/*"]
+        "@component/*": ["component/*"]
+      }
+    }
+  }
