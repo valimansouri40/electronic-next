@@ -8,25 +8,22 @@ import Layout from "@component/home/layout/Layout"
 export default function ProductOne(props) {
 
     // console.log(props)
-    const [product, setProduct] = useState({})
+    // const [product, setProduct] = useState({})
     // useEffect(async()=>{
-    useEffect(async()=>{
-        const userId = JSON.parse(localStorage.getItem('userData')); 
-        const order = await fetchData('/order', 'GET', 
-        `UserId=${userId._id}&videoId=${props.id}&page=${1}&limit=10`
-        , null, true);
-        console.log(order, 'vali mansouri')
-            if( order?.data?.length == 0){
-                delete props.product.links
-            }
-            setProduct(props.product);
-            console.log(props)
-    },[])
+    // useEffect(async()=>{
+        // const userId = JSON.parse(localStorage.getItem('userData')); 
+        // console.log(order, 'vali mansouri')
+        //     if( order?.data?.length == 0){
+        //         delete props.product.links
+        //     }
+        //     setProduct(props.product);
+        //     console.log(props)
+    // },[])
        
     return(
         <div>
              <Layout>
-                 <Product product={product}/>
+                 <Product product={props?.product}/>
              </Layout>
             {/* <div id="13491050709"><script 
             type="text/JavaScript" 
@@ -38,12 +35,24 @@ export default function ProductOne(props) {
 
 export async function getServerSideProps(props){
 
-  
+    let cookies ;
+    if(props.req.cookies?.electronic){
+      cookies = props.req.cookies.electronic?.replace('shahhosseini','')
+    }
+
     const param = props.query.id;
     let getProducat ;
     // if(params?.slug){
      getProducat = await fetchData(`/video/${param}`  , 'GET',
       '', null);
+      let order;
+      if(cookies){
+          order = await fetchData('/order', 'GET',
+            `videoId=${props.id}&page=${1}&limit=10`,null,cookies );
+        }
+       if(getProducat?.data?.status === 'money' && !order?.data){
+            delete getProducat?.data.links
+       }
     // }
     // console.log(getProducat)
     return {props:{ product:  getProducat?.data, id: param}};
