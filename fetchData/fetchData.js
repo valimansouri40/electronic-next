@@ -33,6 +33,11 @@ export default async function fetchData(url ,method , query, postData, cookie ){
                 data.loading = false;
                 if(response.token)setAndGetcookie('POST', {token: response.token});
                 if(response.message)ShowAlert([],response.message, 'success');
+                if(response.reload){
+                    setTimeout(() => {
+                        window.location.reload()    
+                    }, 3000);
+                    };
             }else{
                 if(response.message)ShowAlert([],response.message, 'fail');
 

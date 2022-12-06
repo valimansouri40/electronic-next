@@ -27,7 +27,11 @@ export default function createcategory(){
 
     }
     
-
+    const deleteHandller = async()=>{
+        if(id){
+            await fetchData('/some/category/' + id, 'DELETE', '', true);
+        }
+    }
     
 
     return(
@@ -43,6 +47,7 @@ export default function createcategory(){
            <Form url={'/some/category/' + id } 
            method='PATCH'
            title='به روزرسانی شاخه'
+           id={id} deleteHandller={deleteHandller}
            cookie={true} data={data} setdata={setdata}/> 
         </div>
         )

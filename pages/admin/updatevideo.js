@@ -56,7 +56,7 @@ export default function updateVideo(){
     const deleteHandller =async()=>{
         
         if(id){
-            await fetchData('/some/category/' + id, 'DELETE', '', null);
+            await fetchData('/video/' + id, 'DELETE', '',null , true);
         }
     }
     // style={{}}
@@ -77,7 +77,7 @@ export default function updateVideo(){
             <GoBack/>
            <Form url={'/video/' + id } 
            id={id}
-
+           deleteHandller={deleteHandller}
            title='به روزرسانی  محصول'
            method='PATCH'
            cookie={true} data={data} setdata={setdata}/> 

@@ -3,7 +3,7 @@ import Input from '../input/input';
 import fetchData from '@/fetchData/fetchData';
 
 const Form =(props)=>{
-    const {data, setdata, url, cookie, method, title} = props;
+    const {data, setdata, url, cookie, method, title,id,deleteHandller} = props;
     
 
     const ChangeValueHandller=(e,id)=>{
@@ -90,11 +90,19 @@ const Form =(props)=>{
         })
         const response = await fetchData(url, method?method:'POST', '', form, cookie);
         // console.log(response);
+        setTimeout(() => {
+            
+            window.location.reload();
+        }, 2000);
+
 
     }
     // console.log(url)
     return(
         <form onSubmit={submitHandller} className={classes.form}>
+            {id?<img className={classes.icon_delete}
+            onClick={deleteHandller}
+            src="https://img.icons8.com/color/48/null/delete-forever.png"/>:null}
             <h1>{title}</h1>
             {formItems}
             <div className={classes.form_link_box}>

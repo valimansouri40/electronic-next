@@ -1,7 +1,7 @@
 import fetchData from "@/fetchData/fetchData"
 // import axios from "axios"
-import { useEffect, useState } from "react"
-import classes from '@/styles/Home.module.css'
+// import { useEffect, useState } from "react"
+// import classes from '@/styles/Home.module.css'
 import Product from "@component/product/product"
 import Layout from "@component/home/layout/Layout"
 
@@ -48,12 +48,12 @@ export async function getServerSideProps(props){
       let order;
       if(cookies){
           order = await fetchData('/order', 'GET',
-            `videoId=${props.id}&page=${1}&limit=10`,null,cookies );
+            `videoId=${param}&page=${1}&limit=10`,null,cookies );
         }
-       if(getProducat?.data?.status === 'money' && !order?.data){
+       if(getProducat?.data?.status === 'money' && order?.data?.length === 0){
             delete getProducat?.data.links
        }
     // }
-    // console.log(getProducat)
+    console.log(getProducat, order)
     return {props:{ product:  getProducat?.data, id: param}};
 }

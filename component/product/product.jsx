@@ -2,6 +2,7 @@ import fetchData from '@/fetchData/fetchData';
 import { useEffect, useRef, useState } from 'react';
 import classes from './product.module.css';
 import Modal from '@component/ui/modal/modal';
+import  Router  from 'next/router';
 
 const Product = ({product})=>{
     const [modal, chModalVal] = useState(false);
@@ -44,7 +45,14 @@ const Product = ({product})=>{
                 </div>:
                 <div className={classes.sell_order_box}>
 
-                        <button onClick={()=>chModalVal(true)} 
+                        <button onClick={()=>{
+                                const userData = localStorage.getItem('userData')
+                                if(userData ){
+                                        chModalVal(true)
+                                }else{
+                                        Router.push('/login')
+                                } 
+                                }} 
                         className={classes.btn_order_submit}>
                         خرید ویدئو
                     </button>
